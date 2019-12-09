@@ -1,0 +1,10 @@
+mutation signup(
+  $name: String!
+  $surname: String!
+  $email: String!
+  $password: String!
+) {
+  signup(name: $name, surname: $surname, email: $email, password: $password) {
+    jwt
+  }
+}

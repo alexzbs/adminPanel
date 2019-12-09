@@ -1,0 +1,17 @@
+subscription{
+  operationAdded{
+    id
+    name
+    description
+    queries
+    mutations
+    subscriptions
+    users{
+      id
+      name
+      surname
+      email
+    }
+    
+  }
+}

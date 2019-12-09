@@ -1,0 +1,19 @@
+query {
+  __schema {
+    mutationType {
+      fields {
+        name
+      }
+    }
+    queryType {
+      fields {
+        name
+      }
+    }
+    subscriptionType {
+      fields {
+        name
+      }
+    }
+  }
+}

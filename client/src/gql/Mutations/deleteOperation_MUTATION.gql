@@ -1,0 +1,16 @@
+mutation addOperation($role: ID!, $type: String!, $operation: String!) {
+  deleteOperation(role: $role, type: $type, operation: $operation) {
+    id
+    name
+    description
+    queries
+    mutations
+    subscriptions
+    users {
+      id
+      name
+      surname
+      email
+    }
+  }
+}

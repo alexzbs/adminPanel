@@ -1,0 +1,12 @@
+query {
+  myRole {
+    name
+    queries
+    mutations
+    subscriptions
+    users{
+      id
+      surname
+    }
+  }
+}

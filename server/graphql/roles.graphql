@@ -1,0 +1,33 @@
+type Role {
+  id: ID!
+  name: String!
+  description: String
+  queries: [String]
+  mutations: [String]
+  subscriptions: [String]
+  users: [User]!
+}
+
+type Query {
+  myRole: Role!
+  allRoles: [Role!]!
+}
+
+type Mutation {
+  addRole(
+    name: String!
+    queries: [String]
+    mutations: [String]
+    subscriptions: [String]
+  ): Role!
+  deleteRole(role: ID!): [Role!]!
+  deleteOperation(role: ID!,type: String!, operation: String!): Role!
+  addOperation(role: ID!,type: String!, operation: String!): Role!
+}
+
+ type Subscription {
+   roleAdded: [Role!]!
+   roleDeleted: [Role!]!
+   operationDeleted: Role!
+   operationAdded: Role!
+  }

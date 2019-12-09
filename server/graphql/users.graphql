@@ -1,0 +1,28 @@
+type User {
+  id: ID!
+  name: String
+  surname: String!
+  email: String!
+  password: String!
+  role: Role!
+}
+type Jwt {
+  jwt: String!
+}
+
+type Query {
+  User(email: String!): User
+  AllUsers: [User!]!
+  me: User
+}
+
+type Mutation {
+  changeRole(user:ID!,role:ID!): User!
+  deleteUser(id: ID!): [User!]!
+  signup(name: String!,surname: String! email: String!, password: String!) : Jwt
+  login(email: String!, password: String!): Jwt
+}
+
+  type Subscription {
+   UsersRoleChanged: User!
+  }

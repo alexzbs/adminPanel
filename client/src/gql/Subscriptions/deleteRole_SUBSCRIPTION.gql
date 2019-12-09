@@ -1,0 +1,14 @@
+subscription{
+  roleDeleted{
+    id
+    name
+    description
+    queries
+    mutations
+    subscriptions
+    users{
+      id
+      email
+    }
+  }
+}
